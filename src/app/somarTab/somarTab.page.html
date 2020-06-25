@@ -13,7 +13,7 @@
       <ion-col>
         <ion-item>
           <ion-label position="floating">Valor 1</ion-label>
-          <ion-input></ion-input>
+          <ion-input type="number" [(ngModel)]="valor1"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -22,14 +22,14 @@
       <ion-col>
         <ion-item>
           <ion-label position="floating">Valor 2</ion-label>
-          <ion-input></ion-input>
+          <ion-input type="number" [(ngModel)]="valor2"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
     
     <ion-row>
       <ion-col>
-        <ion-button color="primary" expand="block">
+        <ion-button color="primary" expand="block" (click)="botaoSomar()">
           Somar
         </ion-button>
       </ion-col>
@@ -40,7 +40,7 @@
       <ion-col>
         <ion-item>
           <ion-label color="primary">Resultado</ion-label>
-          <ion-input disabled="true"></ion-input>
+          <ion-input disabled="true" [value]="mostrarResultado()"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
