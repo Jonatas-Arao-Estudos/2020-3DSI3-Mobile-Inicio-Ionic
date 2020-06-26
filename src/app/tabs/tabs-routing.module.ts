@@ -4,31 +4,31 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: 'calculadora',
     component: TabsPage,
     children: [
       {
-        path: 'somarTab',
-        loadChildren: () => import('../somarTab/somarTab.module').then(m => m.SomarTabPageModule)
+        path: 'somar',
+        loadChildren: () => import('../somar-tab/somar-tab.module').then(m => m.SomarTabPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'imc',
+        loadChildren: () => import('../imc-tab/imc-tab.module').then(m => m.ImcTabPageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'pesoIdeal',
+        loadChildren: () => import('../peso-ideal-tab/peso-ideal-tab.module').then(m => m.PesoIdealTabPageModule)
       },
       {
         path: '',
-        redirectTo: '/tabs/somarTab',
+        redirectTo: '/calculadora/somar',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/somarTab',
+    redirectTo: '/calculadora/somar',
     pathMatch: 'full'
   }
 ];

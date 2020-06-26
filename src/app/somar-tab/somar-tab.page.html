@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Somar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" sizeMd="6">
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Valor 1</ion-label>
+              <ion-input type="number" [(ngModel)]="valor1" (ionChange)="calcularSoma()"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Valor 2</ion-label>
+              <ion-input type="number" [(ngModel)]="valor2" (ionChange)="calcularSoma()"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label color="primary" position="fixed" class="ion-text-wrap">Resultado</ion-label>
+              <ion-text>
+                  <h3> {{ resultado }}</h3>
+              </ion-text>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
